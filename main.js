@@ -222,3 +222,83 @@ let cityToFind = "Казань";
 if (cities.includes(cityToFind)) {
     console.log(cities.indexOf(cityToFind));
 }
+
+//8.2
+let user2 = {
+    name: "Ivan",
+    age: 20,
+    isStudent: true,
+    sayHello: function () {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+user2.sayHello();
+
+console.log(user2);
+
+//8.3
+console.log(user2.name);
+console.log(user2.age);
+
+console.log(user2["name"]);
+
+//8.4
+let book = {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869
+};
+
+console.log(book.title);
+console.log(book.author);
+console.log(book.year);
+
+book.year = 2020;
+
+//8.5
+user2.age = 30;
+user2.name = "Кирилл";
+delete user2.isStudent;
+console.log(user2);
+
+//8.7
+let car = {
+    brand: "Toyota",
+    year: 2020,
+    getInfo: function () {
+        console.log(`Автомобиль: ${this.brand}, год выпуска: ${this.year}`);
+    }
+};
+
+car.getInfo();
+
+//8.8
+for (let key in user2) {
+    console.log(key + ": " + user2[key]);
+}
+
+//8.9
+let product = {
+    name: "Ноутбук",
+    price: 75000,
+    brand: "AXAXAX",
+    inStock: true
+};
+
+for (let key in product) {
+    console.log(key + ": " + product[key]);
+}
+
+//8.10
+let student = {
+    name: "Григорий",
+    skills: ["HTML", "CSS", "JS"],
+    address: {
+        city: "Волжский",
+        street: "Пушкина"
+    }
+};
+
+console.log(student.skills[0]);
+console.log(student.address.city);
